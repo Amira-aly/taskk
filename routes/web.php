@@ -24,7 +24,7 @@ Route::get('/all_posts',[PostController::class,'index']);
 // add post
 Route::get('/post/add',[PostController::class,'add']);
 // create post
-Route::post('post/create',[PostController::class],'create')->name('post.create');
+Route::post('post/create',[PostController::class,'create'])->name('post.create');
 // delete post
 Route::delete('/posts/delete/{id}', [PostController::class ,'destroy'])
     ->name('posts.destroy');
