@@ -14,7 +14,14 @@ use App\Http\Controllers\ApiController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+// get all posts
 Route::get('/posts',[ApiController::class ,'index']);
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+// get post by id
+Route::get('/posts/{id}',[ApiController::class ,'show']);
+// add post
+Route::post('/posts',[ApiController::class ,'store']);
+// update post
+Route::put('/posts/{id}',[ApiController::class ,'update']);
+// delete post
+Route::delete('/posts/{id}',[ApiController::class ,'destroy']);
+
